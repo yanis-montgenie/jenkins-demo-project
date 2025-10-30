@@ -48,6 +48,15 @@ pipeline {
                 }
             }
         }
+        stage ('Appeler nouvelle méthode partie5'){
+            steps {
+                script { // Ce bloc script est déjà présent, c'est bien.
+                    org.exemple.utils.MonUtilitaire.partie5(this, "Jenkins User")
+                    def messageSucces = org.exemple.utils.MonUtilitaire.genererMessage("succes")
+                    echo messageSucces
+                }
+            }
+        }
     }
 
     post {
