@@ -1,5 +1,6 @@
 // Jenkinsfile
-@Library('ma-lib-partagee') _
+// @Library('ma-lib-partagee@v1.0') _
+@Library('ma-lib-partagee@main') _ // Ou une branche spécifique si "Implicit checkout" n'est pas coché
 
 pipeline {
     agent any
